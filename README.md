@@ -26,7 +26,7 @@ PATTY requires Bedtools (Quinlan et al., Bioinformatics, 2010) and UCSC tools (K
 PATTY sc mode requires Rpackage [ArchR](https://www.archrproject.com/), [pandas](https://pandas.pydata.org/), [tabix](http://www.htslib.org/doc/tabix.html), and [bgzip](http://www.htslib.org/doc/bgzip.html) pre-installed.
 
 - Genome-wide mappable region annotation<br>
-The genome-wide annotation file for [hg38](https://www.dropbox.com/scl/fi/k6iwvr0rh7ozycxv8u8fh/hg38_mappableBin.bed.gz) and [mm10](https://www.dropbox.com/scl/fi/1fa3ji3pmurreb05lopos/mm10_mappableBin.bed.gz) genome can be downloaded here and input when running PATTY.
+The genome-wide annotation file for [hg38](https://www.dropbox.com/scl/fi/k6iwvr0rh7ozycxv8u8fh/hg38_mappableBin.bed.gz?rlkey=5ofxbeankzvjlb608p2o7y3bn&st=x6y57wcx&dl=0) and [mm10](https://www.dropbox.com/scl/fi/1fa3ji3pmurreb05lopos/mm10_mappableBin.bed.gz?rlkey=250svcejszkf80zmjel8yaz5m&st=jvzu39ld&dl=0) genome can be downloaded here and input when running PATTY.
 
 \# for root user
 ```sh
@@ -124,11 +124,11 @@ chr2    20840   21000   CellB
 ## 6. Testing data and example of output files
 We provided the test data for users to test PATTY. The sc/bulk output can also be generated with the command lines in Section 2 using the testing data as input. Click the file names to download. 
 - testing data for **bulk** mode:
-   - H3K27me3 [`Dropbox`](https://www.dropbox.com/scl/fi/7g46rtmeg9eihj0jbil08/testbulk_H3K27me3.bed.gz)
-   - ATAC [`Dropbox`](https://www.dropbox.com/scl/fi/0ls8fb7qw5v91vmjeff9h/testbulk_ATAC.bed.gz)
+   - H3K27me3 [`Dropbox`](https://www.dropbox.com/scl/fi/7g46rtmeg9eihj0jbil08/testbulk_H3K27me3.bed.gz?rlkey=vgedovvqti7blf5d8bpriav7v&st=ozlmcxjm&dl=0)
+   - ATAC [`Dropbox`](https://www.dropbox.com/scl/fi/0ls8fb7qw5v91vmjeff9h/testbulk_ATAC.bed.gz?rlkey=tkw4m8xzpe58m99foersrcpxq&st=dvsycypq&dl=0)
 - testing data for **sc** mode:
-   - H3K27me3 [`Dropbox`](https://www.dropbox.com/scl/fi/2pid9491b99jgzp784mzo/testsc_H3K27me3.bed.gz)
-   - ATAC [`Dropbox`](https://www.dropbox.com/scl/fi/osv616pafwoycjk5cfkx8/testsc_ATAC.bed.gz)
+   - H3K27me3 [`Dropbox`](https://www.dropbox.com/scl/fi/2pid9491b99jgzp784mzo/testsc_H3K27me3.bed.gz?rlkey=06orl5ot84q6r0p5zfxzuyzwm&st=8xfvowsj&dl=0)
+   - ATAC [`Dropbox`](https://www.dropbox.com/scl/fi/osv616pafwoycjk5cfkx8/testsc_ATAC.bed.gz?rlkey=xqnyzdy65v9asnlrozh0vjwy6&st=rko7bzte&dl=0)
 
 
 ## 7. Other parameters in the PATTY pipeline
@@ -155,7 +155,7 @@ Users can reproduce the bias correction results from the manuscript (Figure 4A, 
 ```sh
 $ PATTY -m bulk -c ${path}/H3K27me3_CUTTag_rep1.bed.gz -a ${path}/ATAC.bed.gz -f H3K27me3 -o testbulk -g hg38 -b hg38_mappableBin.bed.gz
 ```
-Download input [CUT&Tag](https://www.dropbox.com/scl/fi/nyonvtpe8pdhm607vd151/H3K27me3_CUTTag_rep1.bed.gz) and [ATAC](https://www.dropbox.com/scl/fi/gxqxljiv6mr68l92e4hsm/ATAC.bed.gz) data, and example [output](https://www.dropbox.com/scl/fi/cavku8dzgydwj1t26wt9w/testbulk_correctSig.bw) here.
+Download input [CUT&Tag](https://www.dropbox.com/scl/fi/nyonvtpe8pdhm607vd151/H3K27me3_CUTTag_rep1.bed.gz?rlkey=liligwf0mt3mnyj678zcaloub&st=szd8yt24&dl=0) and [ATAC](https://www.dropbox.com/scl/fi/gxqxljiv6mr68l92e4hsm/ATAC.bed.gz?rlkey=n05eoajmo54a9lovz0bjba3rj&st=8nq2wcoa&dl=0) data, and example [output](https://www.dropbox.com/scl/fi/cavku8dzgydwj1t26wt9w/testbulk_correctSig.bw?rlkey=buvvkarm1ongmiwzny9z1d0ht&st=zsixclei&dl=0) here.
 
 ### PATTY Manuscript Source Data and Figure Generation Code
 Users can reproduce other results and figures with the scripts in this [Reproduction Instructions](https://github.com/zang-lab/PATTY_figure_scripts).

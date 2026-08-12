@@ -19,7 +19,7 @@ v1.1 Improve the installation steps. Designed for paper revision.
 
 ## 1. Installation
 - Package requirements<br>
-PATTY requires Linux or MacOS as the OS. We recommend running PATTY within the conda environment in which it was installed.<br>
+PATTY requires Linux or MacOS as the OS. We recommend installing and running PATTY within the same conda environment.<br>
 PATTY requires [Python](https://www.python.org) 3.6+ and [Rscript](https://www.r-project.org) v3+ to run.<br>
 PATTY requires Python packages [scipy](https://scipy.org), [numpy](https://numpy.org), [scikit-learn](https://scikit-learn.org/stable/), and [joblib](https://joblib.readthedocs.io/) pre-installed. <br>
 PATTY requires Bedtools (Quinlan et al., Bioinformatics, 2010) and UCSC tools (Kuhn et al., Brief Bioinform. 2013) pre-installed. <br>
@@ -31,11 +31,6 @@ The genome-wide annotation file for [hg38](https://www.dropbox.com/scl/fi/k6iwvr
 - Download PATTY from this GitHub repo <br>
 ```sh
 $ git clone https://github.com/Tarela/PATTY.git
-```
-- PATTY should be run from the conda environment in which it was installed. Please activate the environment first:
-
-```sh
-$conda activate condaPY3
 ```
 
 - Install PATTY <br>

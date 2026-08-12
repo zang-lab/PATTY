@@ -81,13 +81,15 @@ $ PATTY -m bulk -c ${path}/testbulk_H3K27me3.bed.gz -a ${path}/testbulk_ATAC.bed
 ```sh
 $ PATTY -m sc -c ${path}/testsc_H3K27me3.bed.gz -a ${path}/testsc_ATAC.bed.gz -f H3K27me3 -o testsc -g hg38 -b hg38_mappableBin.bed.gz 
 ```
-- mappable bin file can be downloaded in section1
 - testing data for **bulk** mode:
    - H3K27me3 [`Dropbox`](https://www.dropbox.com/scl/fi/7g46rtmeg9eihj0jbil08/testbulk_H3K27me3.bed.gz?rlkey=vgedovvqti7blf5d8bpriav7v&st=ozlmcxjm&dl=0)
    - ATAC [`Dropbox`](https://www.dropbox.com/scl/fi/0ls8fb7qw5v91vmjeff9h/testbulk_ATAC.bed.gz?rlkey=tkw4m8xzpe58m99foersrcpxq&st=dvsycypq&dl=0)
 - testing data for **sc** mode:
    - H3K27me3 [`Dropbox`](https://www.dropbox.com/scl/fi/2pid9491b99jgzp784mzo/testsc_H3K27me3.bed.gz?rlkey=06orl5ot84q6r0p5zfxzuyzwm&st=8xfvowsj&dl=0)
    - ATAC [`Dropbox`](https://www.dropbox.com/scl/fi/osv616pafwoycjk5cfkx8/testsc_ATAC.bed.gz?rlkey=xqnyzdy65v9asnlrozh0vjwy6&st=rko7bzte&dl=0)
+- Genome-wide mappable region annotation (mappableBin) <br>
+   - [hg38](https://www.dropbox.com/scl/fi/k6iwvr0rh7ozycxv8u8fh/hg38_mappableBin.bed.gz?rlkey=5ofxbeankzvjlb608p2o7y3bn&st=x6y57wcx&dl=0)
+   - [mm10](https://www.dropbox.com/scl/fi/1fa3ji3pmurreb05lopos/mm10_mappableBin.bed.gz?rlkey=250svcejszkf80zmjel8yaz5m&st=jvzu39ld&dl=0)
 
 ## 4. Pre-processing Steps for Generating the Input Fragments File
 

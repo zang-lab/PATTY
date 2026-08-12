@@ -40,7 +40,7 @@ def check_R():
 class my_install_lib(distutils.command.install_lib.install_lib):
     def run(self):
         distutils.command.install_lib.install_lib.run(self)
-        mode = 755
+        mode = 0o755
         # here we start with doing our overriding and private magic ..
         for filepath in self.get_outputs():
             if"bedtools" in filepath or "bedGraphToBigWig" in filepath :

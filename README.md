@@ -28,6 +28,13 @@ PATTY sc mode requires Rpackage [ArchR](https://www.archrproject.com/), [pandas]
 - Genome-wide mappable region annotation<br>
 The genome-wide annotation file for [hg38](https://www.dropbox.com/scl/fi/k6iwvr0rh7ozycxv8u8fh/hg38_mappableBin.bed.gz?rlkey=5ofxbeankzvjlb608p2o7y3bn&st=x6y57wcx&dl=0) and [mm10](https://www.dropbox.com/scl/fi/1fa3ji3pmurreb05lopos/mm10_mappableBin.bed.gz?rlkey=250svcejszkf80zmjel8yaz5m&st=jvzu39ld&dl=0) genome can be downloaded here and input when running PATTY.
 
+- Download PATTY <br>
+\# Download PATTY from this github repo
+```sh
+$ git clone 
+```
+
+- Install PATTY <br>
 \# for root user
 ```sh
 $ cd PATTY

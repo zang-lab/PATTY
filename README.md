@@ -70,18 +70,24 @@ genome version of the input data, choose from hg38 (default) and mm10
 -   -o OUTNAME, --outname=OUTNAME
 Name of output results
 
-Example of running PATTY with default parameters (test data downloadable in :
+#### Example of running PATTY with default parameters:
 
-\# bulk mode (mappable bin file can be downloaded in section1)
+\# bulk mode 
 ```sh
 $ PATTY -m bulk -c ${path}/testbulk_H3K27me3.bed.gz -a ${path}/testbulk_ATAC.bed.gz -f H3K27me3 -o testbulk -g hg38 -b hg38_mappableBin.bed.gz 
 ```
 
-\# sc mode (note that sc mode require bgzip compressed bed reads file for scCUT&Tag reads) 
+\# sc mode (note that sc mode requires a bgzip-compressed bed reads file for scCUT&Tag reads) 
 ```sh
 $ PATTY -m sc -c ${path}/testsc_H3K27me3.bed.gz -a ${path}/testsc_ATAC.bed.gz -f H3K27me3 -o testsc -g hg38 -b hg38_mappableBin.bed.gz 
 ```
-
+- mappable bin file can be downloaded in section1
+- testing data for **bulk** mode:
+   - H3K27me3 [`Dropbox`](https://www.dropbox.com/scl/fi/7g46rtmeg9eihj0jbil08/testbulk_H3K27me3.bed.gz?rlkey=vgedovvqti7blf5d8bpriav7v&st=ozlmcxjm&dl=0)
+   - ATAC [`Dropbox`](https://www.dropbox.com/scl/fi/0ls8fb7qw5v91vmjeff9h/testbulk_ATAC.bed.gz?rlkey=tkw4m8xzpe58m99foersrcpxq&st=dvsycypq&dl=0)
+- testing data for **sc** mode:
+   - H3K27me3 [`Dropbox`](https://www.dropbox.com/scl/fi/2pid9491b99jgzp784mzo/testsc_H3K27me3.bed.gz?rlkey=06orl5ot84q6r0p5zfxzuyzwm&st=8xfvowsj&dl=0)
+   - ATAC [`Dropbox`](https://www.dropbox.com/scl/fi/osv616pafwoycjk5cfkx8/testsc_ATAC.bed.gz?rlkey=xqnyzdy65v9asnlrozh0vjwy6&st=rko7bzte&dl=0)
 
 ## 4. Pre-processing Steps for Generating the Input Fragments File
 
@@ -128,17 +134,7 @@ chr2    20840   21000   CellB
    - Values: Similar PATTY score like in Bulk mode but for each individual cell  
 
 
-## 6. Testing data and example of output files
-We provided the test data for users to test PATTY. The sc/bulk output can also be generated with the command lines in Section 2 using the testing data as input. Click the file names to download. 
-- testing data for **bulk** mode:
-   - H3K27me3 [`Dropbox`](https://www.dropbox.com/scl/fi/7g46rtmeg9eihj0jbil08/testbulk_H3K27me3.bed.gz?rlkey=vgedovvqti7blf5d8bpriav7v&st=ozlmcxjm&dl=0)
-   - ATAC [`Dropbox`](https://www.dropbox.com/scl/fi/0ls8fb7qw5v91vmjeff9h/testbulk_ATAC.bed.gz?rlkey=tkw4m8xzpe58m99foersrcpxq&st=dvsycypq&dl=0)
-- testing data for **sc** mode:
-   - H3K27me3 [`Dropbox`](https://www.dropbox.com/scl/fi/2pid9491b99jgzp784mzo/testsc_H3K27me3.bed.gz?rlkey=06orl5ot84q6r0p5zfxzuyzwm&st=8xfvowsj&dl=0)
-   - ATAC [`Dropbox`](https://www.dropbox.com/scl/fi/osv616pafwoycjk5cfkx8/testsc_ATAC.bed.gz?rlkey=xqnyzdy65v9asnlrozh0vjwy6&st=rko7bzte&dl=0)
-
-
-## 7. Other parameters in the PATTY pipeline
+## 6. Other parameters in the PATTY pipeline
 You can also set the following parameters for more accurate bias estimation and correction:
 - -\-binMinReads=BINMINREADS  
 [optional] Bins with < 5(default) reads covered will be discarded in the analysis. For sc mode, bins with a total of < 5 (default) reads across all high-quality cells will be discarded. set 0 to turn off this parameter. 

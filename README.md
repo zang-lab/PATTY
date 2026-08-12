@@ -32,6 +32,12 @@ The genome-wide annotation file for [hg38](https://www.dropbox.com/scl/fi/k6iwvr
 ```sh
 $ git clone https://github.com/Tarela/PATTY.git
 ```
+PATTY should be run from the conda environment in which it was installed. Please activate the environment first:
+
+```sh
+conda activate condaPY3
+PATTY [options]
+```
 
 - Install PATTY <br>
 

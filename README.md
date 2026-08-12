@@ -31,11 +31,11 @@ The genome-wide annotation file for [hg38](https://www.dropbox.com/scl/fi/k6iwvr
 - Download PATTY <br>
 \# Download PATTY from this github repo
 ```sh
-$ git clone 
+$ git clone https://github.com/Tarela/PATTY.git
 ```
 
 - Install PATTY <br>
-\# for root user
+# for root user
 ```sh
 $ cd PATTY
 $ pip install .  

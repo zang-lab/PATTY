@@ -74,12 +74,12 @@ Name of output results
 
 \# bulk mode 
 ```sh
-$ PATTY -m bulk -c ${path}/testbulk_H3K27me3.bed.gz -a ${path}/testbulk_ATAC.bed.gz -f H3K27me3 -o testbulk -g hg38 -b hg38_mappableBin.bed.gz 
+$ PATTY -m bulk -c ${path}/testbulk_H3K27me3.bed.gz -a ${path}/testbulk_ATAC.bed.gz -f H3K27me3 -o testbulk -g hg38 -b ${path}/hg38_mappableBin.bed.gz 
 ```
 
 \# sc mode (note that sc mode requires a bgzip-compressed bed reads file for scCUT&Tag reads) 
 ```sh
-$ PATTY -m sc -c ${path}/testsc_H3K27me3.bed.gz -a ${path}/testsc_ATAC.bed.gz -f H3K27me3 -o testsc -g hg38 -b hg38_mappableBin.bed.gz 
+$ PATTY -m sc -c ${path}/testsc_H3K27me3.bed.gz -a ${path}/testsc_ATAC.bed.gz -f H3K27me3 -o testsc -g hg38 -b ${path}/hg38_mappableBin.bed.gz 
 ```
 - testing data for **bulk** mode:
    - H3K27me3 [`Dropbox`](https://www.dropbox.com/scl/fi/7g46rtmeg9eihj0jbil08/testbulk_H3K27me3.bed.gz?rlkey=vgedovvqti7blf5d8bpriav7v&st=ozlmcxjm&dl=0)

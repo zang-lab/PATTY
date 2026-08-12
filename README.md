@@ -91,7 +91,7 @@ $ PATTY -m sc -c ${path}/testsc_H3K27me3.bed.gz -a ${path}/testsc_ATAC.bed.gz -f
    - [hg38](https://www.dropbox.com/scl/fi/k6iwvr0rh7ozycxv8u8fh/hg38_mappableBin.bed.gz?rlkey=5ofxbeankzvjlb608p2o7y3bn&st=x6y57wcx&dl=0)
    - [mm10](https://www.dropbox.com/scl/fi/1fa3ji3pmurreb05lopos/mm10_mappableBin.bed.gz?rlkey=250svcejszkf80zmjel8yaz5m&st=jvzu39ld&dl=0)
 
-## 4. Pre-processing Steps for Generating the Input Fragments File
+## 3. Pre-processing Steps for Generating the Input Fragments File
 
 PATTY takes aligned fragment files in **BED format** as input(or .bed.gz for gzip comparessed file). Users may apply any preferred pre-processing pipeline to generate these files. We recommend retaining only **high-quality reads** with **MAPQ > 30** to ensure accurate bias correction. Note that PATTY takes original fragments bed files as input (e.g., transformed directly from aligned BAM files, or 10x cell ranger outputed fragments.tsv file for sc data). Please don't do any customized extension or shifting. 
 
@@ -119,24 +119,24 @@ chr2    20840   21000   CellB
 ```
 > The 4th column must contain the cell barcode or cell name (like AATAACTACGCC-1).
 
-## 5. Output Files
+## 4. Output Files
 
 ### Bulk Mode Outputs
 
-1. `NAME_PATTYscore.bw`  
+- `NAME_PATTYscore.bw`  
    A 200bp-resolution genome-wide track in **bigWig** format containing the PATTY scores for each candidate bin.  
    - Scores range from 0 to 1. Higher scores indicate higher confidence of true histone mark occupancy, while lower scores reflect likely false-positive or background signals due to open chromatin bias.
 
 ### Single-Cell Mode Outputs
 
-1. `NAME_binXcell.txt.gz`  
+- `NAME_binXcell.txt.gz`  
    A **bin-by-cell PATTY score matrix** generated from single-cell CUT&Tag analysis.  
    - Rows: 200bp bins  
    - Columns: individual cells
    - Values: Similar PATTY score like in Bulk mode but for each individual cell  
 
 
-## 6. Other parameters in the PATTY pipeline
+## 5. Other parameters in the PATTY pipeline
 You can also set the following parameters for more accurate bias estimation and correction:
 - -\-binMinReads=BINMINREADS  
 [optional] Bins with < 5(default) reads covered will be discarded in the analysis. For sc mode, bins with a total of < 5 (default) reads across all high-quality cells will be discarded. set 0 to turn off this parameter. 
@@ -155,12 +155,12 @@ You can also set the following parameters for more accurate bias estimation and 
 - -\-keeptmp  
 [optional] Whether or not to keep the intermediate results (tmpResults/)
 
-## 8. Reproduce figure results from the PATTY manuscript
+## 6. Reproduce figure results from the PATTY manuscript
 Users can reproduce the bias correction results from the manuscript (Figure 4A, G, H, H3K27me3 CUT&Tag rep1) by running PATTY with the following command line:
 ```sh
 $ PATTY -m bulk -c ${path}/H3K27me3_CUTTag_rep1.bed.gz -a ${path}/ATAC.bed.gz -f H3K27me3 -o testbulk -g hg38 -b hg38_mappableBin.bed.gz
 ```
 Download input [CUT&Tag](https://www.dropbox.com/scl/fi/nyonvtpe8pdhm607vd151/H3K27me3_CUTTag_rep1.bed.gz?rlkey=liligwf0mt3mnyj678zcaloub&st=szd8yt24&dl=0) and [ATAC](https://www.dropbox.com/scl/fi/gxqxljiv6mr68l92e4hsm/ATAC.bed.gz?rlkey=n05eoajmo54a9lovz0bjba3rj&st=8nq2wcoa&dl=0) data, and example [output](https://www.dropbox.com/scl/fi/cavku8dzgydwj1t26wt9w/testbulk_correctSig.bw?rlkey=buvvkarm1ongmiwzny9z1d0ht&st=zsixclei&dl=0) here.
 
-### PATTY Manuscript Source Data and Figure Generation Code
+## 7. PATTY Manuscript Source Data and Figure Generation Code
 Users can reproduce other results and figures with the scripts in this [Reproduction Instructions](https://github.com/zang-lab/PATTY_figure_scripts).
